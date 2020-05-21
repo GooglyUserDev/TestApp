@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:id="@+id/ll_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/ll_actions"
+        android:layout_toEndOf="@id/product_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:paddingTop="@dimen/_10sdp"
+            android:text="@string/app_name"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingTop="@dimen/_5sdp"
+            android:text="@string/app_name"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tv_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sale Price:"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:textStyle="bold"
+            android:textSize="@dimen/_13sdp"
+            />
+        <TextView
+            android:id="@+id/sale_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text="₹ 1000.00"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_12sdp" />
+        <TextView
+            android:id="@+id/tv_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regular Price:"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:textStyle="bold"
+            android:textSize="@dimen/_13sdp"
+            />
+        <TextView
+            android:id="@+id/regular_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text="₹ 2000.00"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_staff"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/ll_product"
+        android:background="@color/colorBlack" />
+
+    <LinearLayout
+        android:id="@+id/ll_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/delete_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/pdelete" />
+
+        <ImageView
+            android:id="@+id/edit_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/pedit" />
+    </LinearLayout>
+
+</RelativeLayout>
